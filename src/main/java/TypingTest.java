@@ -31,7 +31,7 @@ public class TypingTest {
     public static void testWord(String wordToTest)
     {
         try {
-            int timer = wordToTest.length() * 800;
+            int timer = wordToTest.length() * 1000;
             System.out.println(wordToTest);
             lastInput = "";
             long startTime = System.currentTimeMillis();
@@ -45,6 +45,7 @@ public class TypingTest {
                     break;
                 }
 
+                AllTime+= (int) (System.currentTimeMillis() - startTime);
                 Thread.sleep(50); //برای کاهش مصرف انزی و cpu
 
             }
